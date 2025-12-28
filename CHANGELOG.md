@@ -1,3 +1,241 @@
+## 12.0.0
+
+> Note: This release has breaking changes.
+
+ - **REVERT**: Rename quill_localizations.dart to quill_localizations.g.dart.
+ - **REVERT**(example): using web embed builders for all platforms.
+ - **REVERT**: changes of https://github.com/singerdmx/flutter-quill/commit/836451367ea5712bb93ea0891cc933806188bdb6.
+ - **REVERT**: remove changes of https://github.com/singerdmx/flutter-quill/commit/0d695e9381fd9d889a36837a46b481821b85b95e#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4edR103 since they were not published to pub.dev.
+ - **REVERT**: "Resolved issue with broken IME composing rect in Windows desktop" (#2266).
+ - **REVERT**: disable rich text paste feature on web as a workaround (#2221).
+ - **REVERT**(translations): restore deleted cut and paste keys for english only.
+ - **REVERT**: Remove unpublished 9.3.16-experimental version by CI.
+ - **REVERT**: updating the CHANGELOG.md files wihtout release the changes.
+ - **REVERT**: package version from 9.3.14 to 9.3.13.
+ - **REVERT**: fix the version of the packages by restoring it to the previous state.
+ - **REVERT**: fix selection.affinity always downstream after updateEditingValue.
+ - **REVERT**: move sub packages to `./packages`" (#1717).
+ - **REVERT**: Remove unneeded widget.
+ - **REVERT**: Bug fix temporary.
+ - **REVERT**: Update bug template.
+ - **REVERT**: add new line.
+ - **REFACTOR**: remove media_pick_setting.dart.
+ - **REFACTOR**: moved shortcuts and onKeyEvents to its own file (#2223).
+ - **REFACTOR**: use immutable annotation from flutter foundation instead of meta package in flutter_quill.
+ - **REFACTOR**: restructure project into modular architecture for flutter_quill (#2032).
+ - **REFACTOR**: Moved core link button functions to link.dart (#2008).
+ - **REFACTOR**: context menu function, add test code (#1979).
+ - **REFACTOR**(publishing-workflow): move fethcing GitHub release notes steps into a dart script.
+ - **REFACTOR**: Rename pubspec_overrides.yaml.g to pubspec_overrides.yaml.disabled.
+ - **PERF**: Performance optimization (#1964).
+ - **FIX**(toolbar): regard showDividers in simple toolbar (#2172).
+ - **FIX**: Clicking on the Link icon without any text on a new line will crash.
+ - **FIX**: link menu action Cupertino modal popup now does NOT use root nav (#2332).
+ - **FIX**(macos): Implement actions for ExpandSelectionToDocumentBoundaryIntent and ExpandSelectionToLineBreakIntent to use keyboard shortcuts, unrelated cleanup to the bug fix. (#2279).
+ - **FIX**: allow all correct URLs to be formatted (#2328).
+ - **FIX**: avoid using getClipboardFiles() if unsupported on the current platform.
+ - **FIX**(example): build failure on Android with latest version of Android Studio Ladybug (#2312).
+ - **FIX**(ci): use fixed version of simple_spell_checker to fix CI warnings.
+ - **FIX**: replace flutter_keyboard_visibility with flutter_keyboard_visibility_temp_fork to support Flutter/Wasm target (#2293).
+ - **FIX**: fixed casting null to Tuple2 when link dialog is dismissed without any input (e.g. barrier dismissed) (#681).
+ - **FIX**: update version range of quill_native_bridge to avoid using latest version of the package (#2283).
+ - **FIX**: Resolved issue with broken IME composing rect in Windows desktop app (#2282).
+ - **FIX**(ci): add flutter pub get step for quill_native_bridge to fix failure in #2264 (#2265).
+ - **FIX**: the composing text did not show an underline during IME conversion (#2242).
+ - **FIX**: Resolved issue with broken IME composing rect in Windows desktop app (#2239).
+ - **FIX**: QuillToolbarToggleStyleButton Switching failure (#2234).
+ - **FIX**(readme): use bold text for Markdown and HTML in HTML conversation section.
+ - **FIX**: properties other than 'style' for custom inline code styles (such as 'backgroundColor') were not being applied correctly (#2226).
+ - **FIX**: QuillEditor doesn't respect the system keyboard brightness by default on iOS (#2522).
+ - **FIX**: Block Attributes are not displayed if the editor is empty (#2210).
+ - **FIX**: export camera_types.dart to be able to configure QuillToolbarCameraButtonOptions.
+ - **FIX**: use absolute URL to issue #2194 in CHANGE of 10.5.15-dev.0 to fix link on pub.dev.
+ - **FIX**(readme): use absolute URLs for screenshots section instead of relative path to show on pub.dev.
+ - **FIX**: Allow backspace at start of document to remove block elements and headers" (#2201).
+ - **FIX**: Backspace remove block attributes at start (#2200).
+ - **FIX**: Allow backspace at start of document to remove block elements and headers (#2198).
+ - **FIX**: Assertion Failure in line.dart When Editing Text with Block-Level Attributes (#2174).
+ - **FIX**: viewId when no View in context (#2662).
+ - **FIX**: direction has no opposite effect is the language is rtl (#2154).
+ - **FIX**: Unable to scroll 2nd editor window (#2152).
+ - **FIX**: fix blank lines do not display when --web-renderer=html (#705).
+ - **FIX**: Double click to select text sometimes doesn't work. (#2086)".
+ - **FIX**: Loss of style when backspace (#2125).
+ - **FIX**: unsafe operation while getting overlayEntry in text_selection (#2117).
+ - **FIX**: context menu is visible even when selection is collapsed (#2116).
+ - **FIX**: Link selection and editing (#2114).
+ - **FIX**(example): image_cropper outdated version (#2100).
+ - **FIX**: Double click to select text sometimes doesn't work. (#2086).
+ - **FIX**: collectStyles for lists and alignments (#2082).
+ - **FIX**: hide toolbar if editor loses focus (#2066).
+ - **FIX**: manual checking of directionality (#2063).
+ - **FIX**: invalid selection when tapping placeholder text (#2062).
+ - **FIX**: RTL issues (#2060).
+ - **FIX**: textInputAction is not set when creating QuillRawEditorConfigurations (#2057).
+ - **FIX**: require 10.0.0 as minimum version for quill packages (#2035).
+ - **FIX**: unpredictable endless loop of '_handleFocusChanged' in the phase of page route changing when editor is set to readonly. (#2488).
+ - **FIX**(rule): PreserveInlineStyleRule assume the type of the operation data and throw stacktrace (#2028).
+ - **FIX**: Key actions not being handled (#2025).
+ - **FIX**: removed unicode from `QuillText` element that causes weird caret behavior (#2453).
+ - **FIX**: delta_x tests fail (#2010).
+ - **FIX**: typos in README.md of flutter_quill_extensions.
+ - **FIX**: Fixed passing textStyle to formula embed (#1989).
+ - **FIX**: LineHeight button to use MenuAnchor (#1986).
+ - **FIX**(typo): fix typo ClipboardServiceProvider.instacne (#1983).
+ - **FIX**: PreserveInlineStylesRule (#1980).
+ - **FIX**: common link is detected as a video link (#1978).
+ - **FIX**: make mouse right click to open context menu (#1976).
+ - **FIX**(docs): update outdated code in markdown files.
+ - **FIX**(editor): implement editor shortcut action for home and end keys to fix exception about unimplemented ScrollToDocumentBoundaryIntent (#1937).
+ - **FIX**: search dialog throw an exception due to missing FlutterQuillLocalizations.delegate in the editor (#1938).
+ - **FIX**: color picker hex unfocus on web (#1934).
+ - **FIX**: Enabled link regex to be overridden (#1931).
+ - **FIX**(publishing): create build directory if doesn't exist.
+ - **FIX**: nextLine getter null where no assertion (#1061).
+ - **FIX**(analysis): remove old import related to the recent changes of providing legacy search button.
+ - **FIX**: Can not insert newline when Bold is toggled ON (#75).
+ - **FIX**: assertion failure for swipe typing and undo on Android (#1898).
+ - **FIX**: toolbar style change will be invalid when inputting more than 2 characters at a time (#1890).
+ - **FIX**: Drop the support for formula in the editor.
+ - **FIX**: fix runtime errors.
+ - **FIX**: fix typos in PR template.
+ - **FIX**: Color picker hex field (#2415).
+ - **FIX**: Fixed handling of mac intents (#1089).
+ - **FIX**: Use const constructor for EmbedBuilder (#1160).
+ - **FIX**: pass iconButtonFactor to childBuilder.
+ - **FIX**: analysis warrnings.
+ - **FIX**: typos in using_custom_app_widget.md.
+ - **FIX**: typos localizations_setup.md.
+ - **FIX**: typos custom_embed_blocks.md.
+ - **FIX**: typos custom_toolbar.md.
+ - **FIX**: typos development_notes.md.
+ - **FIX**: typos translation.md.
+ - **FIX**: link in README.md of flutter_quill_extensions.
+ - **FIX**: A bug in quill extensions.
+ - **FIX**(CHANGELOG): use more descriptive bullet points (#1400).
+ - **FIX**: outcommented clipboard status.
+ - **FIX**: typo.
+ - **FIX**: multiline styling stuck/not working properly (#1782).
+ - **FIX**: removed misleading parameters (#1825).
+ - **FIX**: added missed translations for ru, es, de (#1826).
+ - **FIX**: MD Parsing for multi space (#1828).
+ - **FIX**: FontFamily and FontSize toolbars track the text selected in the editor. (#1829).
+ - **FIX**: typos in README.md.
+ - **FIX**(publishing): update the workflow to not use deprecated command, and fix running the script command.
+ - **FIX**: Indented position not holding while editing.
+ - **FIX**: Undo/redo cursor position fixed (#1885).
+ - **FIX**: Issue 1887 (#1892).
+ - **FEAT**: Add configuration option to always indent on TAB key press (#2187).
+ - **FEAT**: Removing check not allowing spell check on web (#2252).
+ - **FEAT**: allow customising iconButtonFactor.
+ - **FEAT**: Line height support (#1972).
+ - **FEAT**: fix #2350.
+ - **FEAT**(extensions): Youtube Video Player Support Mode (#1916).
+ - **FEAT**: add zh_TW localization support (#2598).
+ - **FEAT**: support multiple links insertion on the go (#579).
+ - **FEAT**: add Amharic (ETHIOPIA) localization support (#2582).
+ - **FEAT**: include spell checker for example app (#2127).
+ - **FEAT**: Use quill_native_bridge as default impl in DefaultClipboardService, fix related bugs in the extensions package (#2230).
+ - **FEAT**: Spellchecker for Flutter Quill (#2118).
+ - **FEAT**: customizable character and space shortcut events (#2228).
+ - **FEAT**: support for customize copy and cut Embeddables to Clipboard (#2067).
+ - **FEAT**: Ability to add custom shortcuts (#1097).
+ - **FEAT**: Enable BoxDecoration for DefaultTextBlockStyle of header Attribute (#2438).
+ - **FEAT**: move cursor after inserting video/image (#1739).
+ - **FEAT**: add callback to handle performAction (#2061).
+ - **FEAT**: add paste gif from clipboard (#1788).
+ - **FEAT**(l10n): localize all untranslated.json (#2217).
+ - **FEAT**: Html converter package (#1523).
+ - **FEAT**: cache for toPlainText in Document to avoid unnecessary text computing (#2482).
+ - **FEAT**: allow to use custom callback QuillToolbarColorButton.
+ - **FEAT**: Added builder for custom button in _LinkDialog (#1342).
+ - **FEAT**: Add `readOnlyMouseCursor` to config mouse cursor type (#1873).
+ - **FEAT**(clipboard): allow pasting markdown and html files from the system to the editor (#1915).
+ - **FEAT**(flutter_quill_extensions): improve image save (#2403).
+ - **FEAT**: allow to override link validation check, and accept mailto and other links by default (#2525).
+ - **FEAT**: search bar improved (#1904).
+ - **FEAT**: New way to get Delta from HTML inputs (#1984).
+ - **FEAT**: added option to disable automatic list conversion (#2011).
+ - **FEAT**: added Note to linkActionPickerDelegate (#741).
+ - **FEAT**: custom leading builder (#2146).
+ - **FEAT**(keyboard): support for customize onKey events, original PR #2345 (#2368).
+ - **FEAT**(web): rich text paste from Clipboard using HTML (#2009).
+ - **FEAT**: disableClipboard.
+ - **DOCS**(changelog): super nit.
+ - **DOCS**: update the translation markdown file to reflect the changes.
+ - **DOCS**(changelog): add  in the CHANGELOG.
+ - **DOCS**(changelog): document #2413 changes in unreleased section.
+ - **DOCS**: remove What's changed in the CHANGELOG.md files for version 9.3.15.
+ - **DOCS**: update outdated README.md in the root project folder.
+ - **DOCS**: Add a note to not manually edit the CHANGELOG.md or the version for any of the packages.
+ - **DOCS**: Update outdated README.md.
+ - **DOCS**: Update the Contributing and add a few guidelines.
+ - **DOCS**: update changelog for https://github.com/singerdmx/flutter-quill/pull/2579.
+ - **DOCS**: address https://github.com/singerdmx/flutter-quill/pull/2427#discussion_r1920577655, document enableClipboardPaste to indicates that this is only applicable for the paste button.
+ - **DOCS**: remove pub.dev package link in the README.md.
+ - **DOCS**(readme): remove 'breaking changes' section.
+ - **DOCS**(translations): update outdated translation page.
+ - **DOCS**(translations): improve translation page.
+ - **DOCS**: improve README.md.
+ - **DOCS**(markdown-files): improve markdown docs files.
+ - **DOCS**(markdown-files): improve readability.
+ - **DOCS**: add spacing for Embed Blocks section in flutter_quill_extensions.
+ - **DOCS**: add CODE_OF_CONDUCT.md.
+ - **DOCS**(readme): include a note about converting HTML and Markdown to Delta in Conversion to HTML section.
+ - **DOCS**(readme): add spacing between the We word and the blockquotes.
+ - **DOCS**(readme): use inline code for plugin links.
+ - **DOCS**(readme): update a note about using super_clipboard with flutter_quill.
+ - **DOCS**: update custom_buttons to revert a minor change from previous commit.
+ - **DOCS**: Update CHANGELOG.md and regenerate_versions.dart comments.
+ - **DOCS**: Update CHANGELOG.md and translation.md.
+ - **DOCS**(readme): update flutter_quill_extensions README to reflect the latest changes of table support, add ref when using the packages from git repository.
+ - **DOCS**: Update todo and fix typo.
+ - **DOCS**: Fix typos in the README.md.
+ - **DOCS**: Update the custom toolbar example.
+ - **DOCS**: Outdated custom embed blocks page.
+ - **DOCS**: update flutter_quill_extensions CHANGELOG.
+ - **DOCS**: fix typos README.md.
+ - **DOCS**(readme): update super_clipboard plugin support message to be more specific.
+ - **DOCS**: update outdated README.md in flutter_quill_extensions.
+ - **DOCS**(readme): update 'Conversion to HTML' section to include more details (#1996).
+ - **DOCS**(readme): fix bold text syntax issue in README.md.
+ - **DOCS**(readme): update the 'Conversion to HTML' section to fix minor issue.
+ - **DOCS**(readme): fix a few typos and invalid links in extensions package.
+ - **DOCS**: fix a few typos and add list of local codes.
+ - **DOCS**(readme): update the extensions package to document the Rich Text Paste feature on web, fix typos and split the section with more details (#2001).
+ - **DOCS**: add const keyword for QuillSimpleToolbarConfigurations in README.
+ - **DOCS**: add comment for toolbarSectionSpacing for QuillSimpleToolbar.
+ - **DOCS**(changelog): include PR links to changes of https://github.com/singerdmx/flutter-quill/pull/2416.
+ - **DOCS**: cleanup the docs, remove outdated resources, general changes (#2227).
+ - **DOCS**(readme): fix Installation section reference link.
+ - **DOCS**: Update CHANGELOG.md.
+ - **DOCS**: add important note for contributors before introducing new features (#2269).
+ - **DOCS**: remove table support note in README of flutter_quill_extensions due to #2254.
+ - **DOCS**: Move CONTRIBUTING.md to the root folder.
+ - **DOCS**: Update pull request template.
+ - **DOCS**: Update README.md.
+ - **DOCS**: a minor change in v11 migration for readability.
+ - **DOCS**: add 'and' before videos in extensions package.
+ - **DOCS**(readme): improve Input / Output section to clarify save/load document.
+ - **DOCS**(readme): add 'Breaking Changes' section (#2275).
+ - **DOCS**(readme): update flutter_keyboard_visibility to flutter_keyboard_visibility_temp_fork in plugins section.
+ - **DOCS**(readme): improve the note message of quill_super_clipboard and quill_native_bridge.
+ - **DOCS**: update links to master branch instead of release/v11.
+ - **DOCS**(changelog): add unreleased change related to CI.
+ - **DOCS**: update migration guide to relfect https://github.com/singerdmx/flutter-quill/pull/2529.
+ - **DOCS**(readme): minor changes in README.md, indicating shortcut events in unsupported on mobile devices, fix outdated font family link.
+ - **DOCS**(readme): improve README.md.
+ - **DOCS**(changelog): add new change in Unreleased section.
+ - **DOCS**(readme): use Github admonitions in Markdown blockquotes.
+ - **BREAKING** **REVERT**: magnifier (#2413).
+ - **BREAKING** **REFACTOR**: restructure project into modular architecture for flutter_quill_extensions (#2106).
+ - **BREAKING** **REFACTOR**(plugins): move super clipboard to extensions package (#1914).
+ - **BREAKING** **FIX**(extensions): drop support for YouTube iframeView for non-web platforms, remove youtube_player_flutter dependency, throw warnings for anything related to YoutubeVideoApp in development mode (#2286).
+ - **BREAKING** **FEAT**: release version 11.0.0 with breaking changes (#2338).
+ - **BREAKING** **FEAT**: add config class for clipboard action buttons (#2433).
+ - **BREAKING** **CHORE**: move spell checker to example (#2145).
+ - **BREAKING** **CHORE**: disable clipboard buttons in QuillSimpleToolbar by default.
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
