@@ -1,3 +1,7 @@
+## 12.0.1
+
+ - **REFACTOR**: remove internal annotation from image_save_utils.dart.
+
 ## 12.0.0
 
 > Note: This release has breaking changes.
