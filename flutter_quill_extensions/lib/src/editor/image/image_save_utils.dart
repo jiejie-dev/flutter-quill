@@ -1,4 +1,3 @@
-@internal
 library;
 
 import 'package:flutter/foundation.dart';
