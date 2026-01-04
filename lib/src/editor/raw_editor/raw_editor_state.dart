@@ -321,9 +321,11 @@ class QuillRawEditorState extends EditorState
         }
         break;
       case TargetPlatform.linux:
-      case TargetPlatform.ohos:
       case TargetPlatform.macOS:
       case TargetPlatform.windows:
+        widget.config.focusNode.unfocus();
+        break;
+      default:
         widget.config.focusNode.unfocus();
         break;
     }

@@ -3,8 +3,9 @@ template-arb-file: quill_en.arb
 output-localization-file: quill_localizations.dart
 output-class: FlutterQuillLocalizations
 output-dir: lib/src/l10n/generated
-synthetic-package: false
 format: true
-untranslated-messages-file: lib/src/l10n/untranslated.json
+# untranslated-messages-file: lib/src/l10n/untranslated.json
+# 注释掉此配置以避免在 monorepo 根目录运行 pub get 时的路径解析问题
+# Flutter 会自动创建此文件（如果不存在）
 nullable-getter: true
 suppress-warnings: false
