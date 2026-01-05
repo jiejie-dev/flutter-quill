@@ -1,3 +1,7 @@
+## 12.0.2
+
+ - **FIX**: Platform compatibility issues with the official Flutter.
+
 ## 12.0.1
 
  - **REFACTOR**: remove internal annotation from image_save_utils.dart.
